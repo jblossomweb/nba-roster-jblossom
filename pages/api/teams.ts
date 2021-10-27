@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Team from '../../models/team'
-import teams from '../../data/teams.json'
+import type { Team } from '../../models'
+import { teams } from '../../data'
 
 type Data = Team[]
 

@@ -1,4 +1,4 @@
-import type Team from './Team'
+import type Team from './team.d.ts'
 
 type Player = {
   pid: number,

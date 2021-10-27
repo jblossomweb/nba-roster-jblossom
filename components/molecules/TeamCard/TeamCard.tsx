@@ -27,7 +27,7 @@ const TeamCard: React.FC<Props> = ({
       <div className={style.content}>
         <div
           className={style.top}
-          style={{borderColor: team?.color}}
+          style={{ borderColor: team?.color }}
         >
           <div className={style.logo}>
             <TeamLogo team={team} />

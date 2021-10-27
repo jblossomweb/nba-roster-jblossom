@@ -1,7 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
 import type { Team, Player } from '../../../models'
-import Card from '../../atoms/Card'
 import PlayerHeadshot from '../../atoms/PlayerHeadshot'
 import TeamLogo from '../../atoms/TeamLogo'
 import style from './PlayerCard.module.css'
@@ -56,7 +55,7 @@ const PlayerCard: React.FC<Props> = ({
     <div className={style.content}>
       <div
         className={style.top}
-        style={{borderColor: team?.color}}
+        style={{ borderColor: team?.color }}
       >
         <div className={style.headshot}>
           {!!player.headshot?.length && (

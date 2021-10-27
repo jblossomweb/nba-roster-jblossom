@@ -23,15 +23,16 @@ const SearchInput: React.FC<Props> = ({
     onChange(event) // expose onChange api
   }
 
-  const handleReset: React.MouseEventHandler<SVGElement> = event => {
-    handleChange({ target: { value: '' }} as React.ChangeEvent<HTMLInputElement>)
+  const handleReset: React.MouseEventHandler<SVGElement> = () => {
+    handleChange({ target: { value: '' } } as React.ChangeEvent<HTMLInputElement>)
   }
 
-  const handleKeydown: React.KeyboardEventHandler<HTMLInputElement> = ({ key, target }) => {
-    if (key === 'Escape') {
-      handleReset({ target } as React.MouseEvent<SVGElement>)
+  const handleKeydown: React.KeyboardEventHandler<HTMLInputElement> =
+    ({ key, target }) => {
+      if (key === 'Escape') {
+        handleReset({ target } as React.MouseEvent<SVGElement>)
+      }
     }
-  }
 
   return (
     <div className={style.wrapper}>

@@ -14,7 +14,7 @@ const IndexPage: NextPage = () => (
     <MainTemplate>
       <>
         <LandingScreen />
-        </>
+      </>
     </MainTemplate>
   </>
 )

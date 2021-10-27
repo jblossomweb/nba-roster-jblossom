@@ -47,7 +47,7 @@ const PlayersListVirtualized: React.FC<Props> = ({
 
               for (let i = fromIndex; i < toIndex; i++) {
                 const player = players[i]
-                const team = teams.find(({ ta }) => ta === player.ta);
+                const team = teams.find(({ ta }) => ta === player.ta)
                 const visibleIndex = i - fromIndex
                 const animationDelay = animate ? `${(visibleIndex * 0.1)}s` : undefined
                 items.push(

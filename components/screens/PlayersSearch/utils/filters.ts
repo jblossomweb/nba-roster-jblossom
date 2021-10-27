@@ -6,7 +6,7 @@ export const teamFilter = (ta: Team['ta']) => (player: Player) => (
 
 export const searchFilter = (search: string) => (player: Player) => (
   !search?.length ? true :
-  player.fn.toLowerCase().startsWith(search.toLowerCase()) ||
+    player.fn.toLowerCase().startsWith(search.toLowerCase()) ||
   player.ln.toLowerCase().startsWith(search.toLowerCase()) ||
   (`${player.fn.toLowerCase()} ${player.ln.toLowerCase()}`).startsWith(search.toLowerCase())
 )

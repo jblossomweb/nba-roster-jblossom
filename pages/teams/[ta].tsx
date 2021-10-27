@@ -17,7 +17,12 @@ type Props = {
 const TeamPage: NextPage<Props> = ({ teams }) => {
   const { query } = useRouter()
   const { players, loading, error } = usePlayers()
-  const team = query?.ta && teams.find(t => t.ta.toLowerCase() === String(query.ta).toLowerCase())
+  const team = (
+    query?.ta &&
+    teams.find(
+      t => t.ta.toLowerCase() === String(query.ta).toLowerCase()
+    )
+  )
   const title = team ? `${team.city} ${team.name}` : 'Invalid Team'
   
   return (

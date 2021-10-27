@@ -29,17 +29,23 @@ const PlayersSearch: React.FC<Props> = ({
   const [search, setSearch] = useState('')
   const [rendering, setRendering] = useState(false)
 
-  const handleSearch: React.ChangeEventHandler<HTMLInputElement> = useMemo(() => debounce(event => {
-    const { value } = event.target
-    setSearch(value)
-    delayRendering()
-  }, 500), [])
+  const handleSearch: React.ChangeEventHandler<HTMLInputElement> = useMemo(
+    () => debounce(event => {
+      const { value } = event.target
+      setSearch(value)
+      delayRendering()
+    }, 500),
+    []
+  )
 
-  const handleTeam: React.ChangeEventHandler<HTMLSelectElement> = useMemo(() => debounce(event => {
-    const { value } = event.target
-    delayRendering()
-    setTeam(value)
-  }, 1), [])
+  const handleTeam: React.ChangeEventHandler<HTMLSelectElement> = useMemo(
+    () => debounce(event => {
+      const { value } = event.target
+      delayRendering()
+      setTeam(value)
+    }, 1),
+    []
+  )
 
   const delayRendering = () => {
     setRendering(true)
@@ -88,9 +94,9 @@ const PlayersSearch: React.FC<Props> = ({
       {!loading && !rendering && !error && (
         <div className={style.results}>
           {!filtered.length ? (
-              <div className={style.noresults}>
+            <div className={style.noresults}>
                 No Players Found
-              </div>
+            </div>
           ) : (
             <PlayersListVirtualized
               animate={animate}

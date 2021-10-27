@@ -1,7 +1,34 @@
 # NBA React Eval - Part 1
 
+![](https://media.giphy.com/media/vOoLte53vWFiO8lDxq/giphy.gif)
 
-### Instructions
+## Live App
+
+- Vercel: https://nba-roster-jblossom.vercel.app
+- Netlify: https://vigorous-heisenberg-fc4b21.netlify.app
+
+## Developer Quick Start
+
+- install dependencies: `yarn install`
+- run dev server: `yarn dev`
+
+### other commands
+
+- run storybook: `yarn storybook`
+- build app: `yarn build`
+- build storybook: `yarn storybook-build`
+
+## Notes
+
+- there is a basic grid for team rosters. teams load server-side, and players fetch client-side.
+- there is an experimental virtualized grid for full league roster and search/filter. teams and players load client-side.
+
+## To Do
+
+- a player page would be nice
+- more tests
+
+## Original Instructions
 
 Step 1. Bootstrap a new [NextJS](https://nextjs.org/) site by using `create-next-app`
 

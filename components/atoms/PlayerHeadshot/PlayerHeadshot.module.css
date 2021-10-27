@@ -1,0 +1,16 @@
+@keyframes SlideUp {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.image {
+  position: relative;
+}
+
+.animate {
+  animation: SlideUp .2s ease-in-out both;
+}

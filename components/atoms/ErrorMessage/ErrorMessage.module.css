@@ -1,0 +1,11 @@
+.error {
+  @apply
+    flex
+    content-center
+    items-center
+    h-8
+    gap-2
+    text-red-500
+    font-bold
+  ;
+}

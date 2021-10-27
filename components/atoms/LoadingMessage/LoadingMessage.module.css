@@ -1,0 +1,40 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes ellipsis {
+  from { width: 0; }
+  to { width: 1.25em; }
+}
+
+.spinner {
+  animation: spin 1s infinite ease-in-out;
+}
+
+.loading {
+  @apply
+    flex
+    content-center
+    h-16
+  ;
+}
+
+.loading > * {
+  @apply my-1 mx-1;
+  line-height: 16px;
+}
+
+.loading span {
+  @apply font-bold;
+  font-family: Roboto, sans-serif;
+}
+
+.loading span:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;    
+  animation: ellipsis steps(4, end) .5s infinite;
+  content: "...";
+  width: 0px;
+}

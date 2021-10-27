@@ -1,0 +1,29 @@
+.wrapper {
+  @apply relative;
+}
+
+.input {
+  @apply
+    border border-gray-300
+    rounded-md shadow-sm
+    w-full h-10
+    py-4 px-3
+    mt-1 mb-3
+    leading-tight
+  ;
+  padding-left: 40px;
+}
+
+.icon {
+  @apply text-gray-400 my-4 mx-3;
+  position: absolute;
+}
+
+.close {
+  @apply
+    top-0 right-0
+    my-4 mx-2
+    cursor-pointer
+  ;
+  /* margin: 8px; */
+}

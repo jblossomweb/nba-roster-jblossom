@@ -85,7 +85,7 @@ const PlayersSearch: React.FC<Props> = ({
       {!!(loading || rendering) && (
         <LoadingMessage message="Loading Players" />
       )}
-      {!loading && !error && (
+      {!loading && !rendering && !error && (
         <div className={style.results}>
           {!filtered.length ? (
               <div className={style.noresults}>

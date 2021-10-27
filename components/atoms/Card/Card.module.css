@@ -1,0 +1,11 @@
+.card {
+  @apply
+    bg-white
+    shadow
+    rounded
+    relative
+    overflow-hidden
+    border
+    border-gray-100
+  ;
+}

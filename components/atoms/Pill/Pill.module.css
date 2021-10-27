@@ -1,0 +1,12 @@
+.pill {
+  @apply
+    p-4
+    m-4
+    flex
+    flex-col
+    gap-1
+    justify-center
+    items-center
+    rounded-full
+  ;
+}

@@ -1,0 +1,89 @@
+@keyframes sproutIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+.card {
+  @apply bg-white shadow rounded relative overflow-hidden border border-gray-100;
+  display: block;
+  width: 300px;
+  height: 167px;
+  font-family: Roboto, sans-serif;
+}
+
+.card:hover {
+  @apply bg-yellow-50 bg-opacity-20;
+}
+
+.animate {
+  animation: sproutIn .1s ease-in-out both, forwards;
+}
+
+.bg-logo {
+  @apply absolute z-0 opacity-5 filter grayscale;
+  top: -82px;
+  left: -33px;
+}
+
+.card:hover .bg-logo {
+  @apply opacity-10 filter-none;
+}
+
+.fg-logo {
+  @apply absolute z-10;
+  top: 8px;
+  right: 8px;
+}
+
+.content {
+  @apply relative z-10 w-full h-full;
+}
+
+.top {
+  @apply flex flex-row items-end justify-between w-full h-2/3 border-b-4;
+  overflow: hidden;
+}
+
+.headshot {
+  @apply w-2/5;
+  height: 84px;
+}
+
+.info {
+  @apply h-3/4;
+  width: 53%;
+}
+
+.info p {
+  @apply text-xs text-gray-400;
+}
+
+.info h4 {
+  @apply text-base font-bold leading-5;
+}
+
+.bottom {
+  @apply flex flex-row bg-white w-full h-1/3;
+}
+
+.stat {
+  @apply w-1/3 h-full border-r border-gray-100 flex flex-col items-center justify-center;
+}
+
+.stat:last-child {
+  @apply border-0;
+}
+
+.stat h4 {
+  @apply text-sm font-normal leading-4;
+}
+
+.stat p {
+  @apply text-base font-bold leading-5;
+}

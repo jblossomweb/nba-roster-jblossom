@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import type { Team } from '../../models'
+import type { Team } from '../../../models'
 
 export type Props = {
   team: Team,

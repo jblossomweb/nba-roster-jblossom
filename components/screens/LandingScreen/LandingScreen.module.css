@@ -1,0 +1,79 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+.screen {
+  @apply
+    w-full
+    flex
+    flex-col
+    justify-center
+    items-center
+  ;
+}
+
+.content {
+  @apply
+    p-8
+    flex
+    flex-col
+    gap-4
+    justify-center
+    items-center
+  ;
+}
+
+.image {
+  animation: fadeIn .333s ease-in both, forwards;
+}
+
+.links {
+  @apply
+    flex
+    xs:flex-col
+    sm:flex-col
+    md:flex-col
+    lg:flex-row
+    xl:flex-row
+    xxl:flex-row
+    justify-center
+    items-center
+  ;
+}
+
+.pill {
+  animation: fromBottom .333s ease-out;
+}
+
+.pill:hover {
+  transform: scale(1.1);
+}
+
+.pill h1 {
+  @apply
+    text-xl
+  ;
+}
+
+.pill h2 {
+  @apply
+    text-sm
+  ;
+}

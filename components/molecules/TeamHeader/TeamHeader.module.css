@@ -1,0 +1,49 @@
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.header {
+  @apply
+    w-full
+    flex
+    flex-row
+    justify-start
+    items-center
+    mb-4
+    filter drop-shadow
+  ;
+  font-family: Roboto, sans-serif;
+  border-bottom: 4px solid;
+}
+
+.header > * {
+  @apply p-4;
+}
+
+.animate.header {
+  animation: flyIn .333s ease-out both, forwards;
+}
+
+.animate.text {
+  
+}
+
+.logo {
+
+}
+
+.content h1 {
+  @apply
+    subpixel-antialiased
+    xs:text-xl
+    sm:text-3xl
+    text-5xl
+  ;
+}

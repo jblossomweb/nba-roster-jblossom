@@ -1,0 +1,29 @@
+.filters {
+  @apply
+    flex
+    xs:flex-col
+    sm:flex-col
+    md:flex-row
+    justify-between
+    xs:h-28
+    sm:h-28
+    md:h-16
+  ;
+  width: calc(100vw - 30px);
+}
+
+.filters > * {
+  @apply w-full;
+  max-width: 300px;
+}
+
+.results {
+  @apply w-full;
+}
+
+.noresults {
+  @apply
+    text-base
+    font-bold
+  ;
+}
